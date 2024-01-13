@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Imprimir formulario compacto",
+    "version": "1.0",
+    "host_permissions": [
+      "https://docs.google.com/forms/d/e/1FAIpQLSfXFZ2xwVNWP2RzCCGzvProcFUH7scrp6fnRYT6dCiJz1M9Jg/viewform"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://docs.google.com/forms/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      { "resources": ["images/*.jpeg"], "matches": ["<all_urls>"] },
+      { "resources": ["images/*.png"], "matches": ["<all_urls>"] }
+    ]
+  }
+  
